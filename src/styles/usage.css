@@ -1,0 +1,15 @@
+.usage {
+  height: 100px;
+  text-align: center;
+}
+
+.usage > p {
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+.code-container {
+  width: 600px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}

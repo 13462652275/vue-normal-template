@@ -1,0 +1,25 @@
+/* 电脑等设备屏幕 */
+body,
+.container {
+  overflow-x: hidden;
+}
+
+.clearfix:after {
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+.clearfix {
+  zoom:1;
+}
+
+.fl {
+  float: left !important;
+}
+
+.fr {
+  float: right !important;
+}
