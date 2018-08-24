@@ -250,21 +250,13 @@ function binl2b64 (binarray) {
   return str;
 };
 
+export default hex_md5;
 
-if (typeof exports === 'object' && typeof module === 'object') {
-  module.exports = hex_md5;
-  module.exports.hex_md5 = hex_md5;
-  module.exports.b64_md5 = b64_md5;
-  module.exports.str_md5 = str_md5;
-  module.exports.hex_hmac_md5 = hex_hmac_md5;
-  module.exports.b64_hmac_md5 = b64_hmac_md5;
-  module.exports.str_hmac_md5 = str_hmac_md5;
-} else if(typeof exports === 'object') {
-  exports = hex_md5;
-  exports.hex_md5 = hex_md5;
-  exports.b64_md5 = b64_md5;
-  exports.str_md5 = str_md5;
-  exports.hex_hmac_md5 = hex_hmac_md5;
-  exports.b64_hmac_md5 = b64_hmac_md5;
-  exports.str_hmac_md5 = str_hmac_md5;
+export {
+  hex_md5,
+  b64_md5,
+  str_md5,
+  hex_hmac_md5,
+  b64_hmac_md5,
+  str_hmac_md5,
 };

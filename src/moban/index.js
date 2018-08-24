@@ -1,3 +1,3 @@
-import  from './.vue';
+import  from './';
 
 export default ;

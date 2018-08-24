@@ -298,7 +298,7 @@ class SimpleCalendar {
     //刷新日历
     this.update();
     //时间刷新
-    // self.setInterval('SimpleCalendar.timeupdate()', 200);
+    self.setInterval(this.timeupdate, 200);
   }
 
   //刷新日历
@@ -717,24 +717,39 @@ class SimpleCalendar {
     return array;
   }
 
+  //时间刷新函数
+  timeupdate() {
+    var timespan = document.querySelectorAll('.sc-time');
+    var now = new Date();
+    var nh = now.getHours();
+    var nm = now.getMinutes();
+    var ns = now.getSeconds();
+    if (nh < 10) nh = '0' + nh;
+    if (nm < 10) nm = '0' + nm;
+    if (ns < 10) ns = '0' + ns;
+    [].forEach.call(timespan, function(v) {
+      v.innerHTML = '时间：' + nh + ":" + nm + ':' + ns;
+    })
+  }
+
   // get options() {
   //   console.log(this._options);
   // }
 }
 //时间刷新函数
-SimpleCalendar.timeupdate = function() {
-  var timespan = document.querySelectorAll('.sc-time');
-  var now = new Date();
-  var nh = now.getHours();
-  var nm = now.getMinutes();
-  var ns = now.getSeconds();
-  if (nh < 10) nh = '0' + nh;
-  if (nm < 10) nm = '0' + nm;
-  if (ns < 10) ns = '0' + ns;
-  [].forEach.call(timespan, function(v) {
-    v.innerHTML = '时间：' + nh + ":" + nm + ':' + ns;
-  })
-}
+// SimpleCalendar.timeupdate = function() {
+//   var timespan = document.querySelectorAll('.sc-time');
+//   var now = new Date();
+//   var nh = now.getHours();
+//   var nm = now.getMinutes();
+//   var ns = now.getSeconds();
+//   if (nh < 10) nh = '0' + nh;
+//   if (nm < 10) nm = '0' + nm;
+//   if (ns < 10) ns = '0' + ns;
+//   [].forEach.call(timespan, function(v) {
+//     v.innerHTML = '时间：' + nh + ":" + nm + ':' + ns;
+//   })
+// }
 //国际化，和一些节日数据，标记数据
 SimpleCalendar.prototype.languageData = {
   feativals_CH: {
