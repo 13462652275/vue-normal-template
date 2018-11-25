@@ -43,7 +43,7 @@ export const routes = [
 
 //启动路由
 const router = new Router({
-  mode: 'history',
+  // mode: 'history',
   routes,
 });
 

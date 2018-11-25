@@ -5,7 +5,7 @@ process.env.NODE_ENV === 'development' ? mock.start() : null;
 
 //暴露 config 中的实例
 export { default } from './config';
-export * from './config';
+// export * from './config';
 
 //User
 export * from './user';
